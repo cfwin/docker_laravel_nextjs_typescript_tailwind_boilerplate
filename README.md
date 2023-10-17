@@ -1,0 +1,1 @@
+# docker_laravel_nextjs_typescript_tailwind_template
