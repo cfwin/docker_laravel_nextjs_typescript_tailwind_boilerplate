@@ -1,5 +1,10 @@
 # 项目名称 - Laravel, Next.js, TypeScript, Tailwind Template
 
+## 文档
+- [English](./README.md)
+- [中文](/docs/ZH.md)
+- [日本語](/docs/JA.md)
+
 ## 介绍
 这个项目是一个Docker化的模板，旨在帮助您快速开始使用Laravel、Next.js、TypeScript和Tailwind CSS构建Web应用程序。
 

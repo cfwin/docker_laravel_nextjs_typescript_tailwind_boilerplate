@@ -1,5 +1,10 @@
 # プロジェクト名 - Laravel, Next.js, TypeScript, Tailwind Template
 
+## ドキュメン
+- [English](./README.md)
+- [中文](/docs/ZH.md)
+- [日本語](/docs/JA.md)
+
 ## はじめに
 このプロジェクトは、Laravel、Next.js、TypeScript、およびTailwind CSSを使用してWebアプリケーションの構築を迅速に開始するのに役立つDocker化されたテンプレートです。
 
