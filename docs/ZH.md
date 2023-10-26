@@ -61,24 +61,24 @@
    
 7. 安装并运行 Next.js:
 
-现在，让我们设置并运行 Next.js 应用程序。
-
-	- 运行以下命令以进入 Next.js 项目目录：
-	```bash
-		docker-compose exec app-front bash
-	```
-	- 进入 Next.js 项目目录：
-	```bash
-	   cd /usr/src/app
-	```
-	- 安装所需的依赖项：
-	```bash
-	   npm install
-	```
-	- 启动 Next.js 开发服务器：
-	```bash
-	   npm run dev
-	```
+   现在，让我们设置并运行 Next.js 应用程序。
+   
+   - 运行以下命令以进入 Next.js 项目目录：
+   ```bash
+   docker-compose exec app-front bash
+   ```
+   - 进入 Next.js 项目目录：
+   ```bash
+   cd /usr/src/app
+   ```
+   - 安装所需的依赖项：
+   ```bash
+   npm install
+   ```
+   - 启动 Next.js 开发服务器：
+   ```bash
+   npm run dev
+   ```
 
 7. 进入Laravel项目目录：首先，访问 app-api 服务的容器。您可以通过运行以下命令来实现：
     - Laravel应用程序：在浏览器中访问 http://localhost:8080/

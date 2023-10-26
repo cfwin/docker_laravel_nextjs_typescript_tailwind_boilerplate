@@ -61,23 +61,23 @@
    
 7. Next.jsのインストールと実行:
 
-それでは、Next.jsアプリケーションのセットアップと実行を行いましょう。
-
-	```bash
-		docker-compose exec app-front bash
-	```
-	- Next.jsプロジェクトディレクトリに移動します：
-	```bash
-	   cd /usr/src/app
-	```
-	- 必要な依存関係をインストールします：
-	```bash
-	   npm install
-	```
-	- Next.jsの開発サーバーを起動します：
-	```bash
-	   npm run dev
-	```
+   それでは、Next.jsアプリケーションのセットアップと実行を行いましょう。
+   
+   ```bash
+   docker-compose exec app-front bash
+   ```
+   - Next.jsプロジェクトディレクトリに移動します：
+   ```bash
+   cd /usr/src/app
+   ```
+   - 必要な依存関係をインストールします：
+   ```bash
+   npm install
+   ```
+   - Next.jsの開発サーバーを起動します：
+   ```bash
+   npm run dev
+   ```
 	
 8. Laravelプロジェクトのディレクトリに入ります：最初にapp-apiサービスのコンテナにアクセスします。次のコマンドを実行してください：
     - Laravelアプリケーション：ブラウザで http://localhost:8080/ を訪れます。

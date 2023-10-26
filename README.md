@@ -60,21 +60,24 @@ This project is a Dockerized template aimed at helping you quickly get started w
    This will set these environment variables to the specified values.
 7. Install and Run Next.js:
 
-Now, let's set up and run the Next.js application.
+	Now, let's set up and run the Next.js application.
+	
 	```bash
-		docker-compose exec app-front bash
+	docker-compose exec app-front bash
 	```
 	- Navigate to the Next.js project directory:
 	```bash
-	   cd /usr/src/app
+	cd /usr/src/app
 	```
 	- Install the required dependencies:
+	
 	```bash
-	   npm install
+	npm install
 	```
+	
 	- Start the Next.js development server:
 	```bash
-	   npm run dev
+	npm run dev
 	```
 
 8. Enter the Laravel Project Directory: First, access the container for the app-api service. You can do this by running the following command:
