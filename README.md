@@ -36,6 +36,8 @@ This project is a Dockerized template aimed at helping you quickly get started w
    ```bash
    cd /src/backend/api
    composer update
+   cp .env.example .env
+   php artisan key:generate
    ```
    Update the configuration of the .env file:
    ```plaintext
@@ -56,7 +58,26 @@ This project is a Dockerized template aimed at helping you quickly get started w
    SANCTUM_STATEFUL_DOMAINS=host.docker.internal
    ```
    This will set these environment variables to the specified values.
-7. Enter the Laravel Project Directory: First, access the container for the app-api service. You can do this by running the following command:
+7. Install and Run Next.js:
+
+Now, let's set up and run the Next.js application.
+	```bash
+		docker-compose exec app-front bash
+	```
+	- Navigate to the Next.js project directory:
+	```bash
+	   cd /usr/src/app
+	```
+	- Install the required dependencies:
+	```bash
+	   npm install
+	```
+	- Start the Next.js development server:
+	```bash
+	   npm run dev
+	```
+
+8. Enter the Laravel Project Directory: First, access the container for the app-api service. You can do this by running the following command:
    - Laravel Application: Visit http://localhost:8080/ in your browser.
    - Next.js Application: Visit http://localhost:8300/ in your browser.
    - Hello Page: Visit http://localhost:8300/hello in your browser.
