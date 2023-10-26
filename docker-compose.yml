@@ -1,0 +1,78 @@
+version: '3'
+services:
+  app-nginx:
+    container_name: "app-nginx"
+    build:
+      context: ./docker/nginx
+    depends_on:
+      - app-api
+    ports:
+      - 8080:8080
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - ./:/src
+
+  app-api:
+    container_name: "app-api"
+    build:
+      context: ./docker/php
+    depends_on:
+      - app-mysql
+      - app-redis
+    environment:
+      TZ: 'Asia/Shanghai'
+      PHP_REDIS_SESSION_HOST: 'redis'
+      CREATE_LARAVEL_STORAGE: '1'
+    ports:
+      - 5173:5173
+    volumes:
+      - ./backend:/src/backend
+#      - /src/api/node_modules
+#      - /src/api/vendor
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+
+  app-front:
+    container_name: "app-front"
+    build:
+      context: ./docker/front
+    volumes:
+      - ./frontend/app:/usr/src/app
+#    command: 'npm run dev'
+    restart: always
+    tty: true
+    working_dir: '/usr/src/app'
+    ports:
+        - "8300:3000"
+    depends_on:
+      - app-nginx
+      - app-redis
+    environment:
+      - HOST=0.0.0.0
+      - port=3000
+      - CHOKIDAR_USEPOLLING=true
+
+  app-mysql:
+    image: mysql:8
+#    command: --max_allowed_packet=32505856
+    container_name: "app-mysql"
+    volumes:
+#      - ./docker/mysql:/var/lib/mysql
+      - data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=password
+      - TZ="Asia/Tokyo"
+#    ports:
+#      - 13306:3306
+
+  app-redis:
+    image: redis:alpine
+    container_name: "app-redis"
+    ports:
+      - 16379:6379
+volumes:
+  data:
