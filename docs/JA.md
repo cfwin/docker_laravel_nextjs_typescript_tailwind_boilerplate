@@ -1,7 +1,7 @@
 # プロジェクト名 - Laravel, Next.js, TypeScript, Tailwind Template
 
 ## ドキュメン
-- [English](./README.md)
+- [English](/README.md)
 - [中文](/docs/ZH.md)
 - [日本語](/docs/JA.md)
 
