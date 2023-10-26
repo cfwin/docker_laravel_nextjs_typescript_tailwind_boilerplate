@@ -1,0 +1,3 @@
+/docker/nginx/logs/access.log
+/docker/nginx/logs/error.log
+/backend/api/composer.lock
