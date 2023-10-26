@@ -37,8 +37,21 @@ This project is a Dockerized template aimed at helping you quickly get started w
    cd /src/backend/api
    composer update
    ```
-   Add the following lines to the end of the .env file to set the FRONTEND_URL and SANCTUM_STATEFUL_DOMAINS configurations:
+   Update the configuration of the .env file:
    ```plaintext
+   # Update
+   DB_CONNECTION=mysql
+   DB_HOST=app-mysql
+   DB_PORT=3306
+   DB_DATABASE=navi
+   DB_USERNAME=app
+   DB_PASSWORD=password
+   
+   REDIS_HOST=app-redis
+   REDIS_PASSWORD=null
+   REDIS_PORT=6379
+   
+   # Add
    FRONTEND_URL=http://host.docker.internal:8080
    SANCTUM_STATEFUL_DOMAINS=host.docker.internal
    ```

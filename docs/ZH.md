@@ -37,10 +37,23 @@
    cd /src/backend/api
    composer update
    ```
-   在 .env 文件中添加以下行，将 FRONTEND_URL 和 SANCTUM_STATEFUL_DOMAINS 配置添加到文件的末尾：
+   更新 .env 文件的配置：
    ```plaintext
-    FRONTEND_URL=http://host.docker.internal:8080
-    SANCTUM_STATEFUL_DOMAINS=host.docker.internal
+   # Update
+   DB_CONNECTION=mysql
+   DB_HOST=app-mysql
+   DB_PORT=3306
+   DB_DATABASE=navi
+   DB_USERNAME=app
+   DB_PASSWORD=password
+   
+   REDIS_HOST=app-redis
+   REDIS_PASSWORD=null
+   REDIS_PORT=6379
+   
+   # Add
+   FRONTEND_URL=http://host.docker.internal:8080
+   SANCTUM_STATEFUL_DOMAINS=host.docker.internal
    ```
    这会将这些环境变量设置为指定的值。
 

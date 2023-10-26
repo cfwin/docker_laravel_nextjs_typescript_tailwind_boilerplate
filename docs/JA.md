@@ -37,10 +37,23 @@
    cd /src/backend/api
    composer update
    ```
-   .env ファイルの末尾に以下の行を追加して、FRONTEND_URL と SANCTUM_STATEFUL_DOMAINS の設定を行います：
+   .env ファイルの構成を更新：
    ```plaintext
-    FRONTEND_URL=http://host.docker.internal:8080
-    SANCTUM_STATEFUL_DOMAINS=host.docker.internal
+   # Update
+   DB_CONNECTION=mysql
+   DB_HOST=app-mysql
+   DB_PORT=3306
+   DB_DATABASE=navi
+   DB_USERNAME=app
+   DB_PASSWORD=password
+   
+   REDIS_HOST=app-redis
+   REDIS_PASSWORD=null
+   REDIS_PORT=6379
+   
+   # Add
+   FRONTEND_URL=http://host.docker.internal:8080
+   SANCTUM_STATEFUL_DOMAINS=host.docker.internal
    ```
    これにより、これらの環境変数が指定した値に設定されます。
 7. Laravelプロジェクトのディレクトリに入ります：最初にapp-apiサービスのコンテナにアクセスします。次のコマンドを実行してください：
