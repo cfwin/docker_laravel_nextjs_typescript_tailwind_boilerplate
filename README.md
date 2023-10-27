@@ -1,4 +1,4 @@
-# Project Name - Laravel, Next.js, TypeScript, Tailwind Template
+# Project Name - Laravel, Next.js, TypeScript, Tailwind boilerplate
 
 ## Documentation
 - [English](/README.md)
