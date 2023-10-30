@@ -45,7 +45,7 @@
    DB_CONNECTION=mysql
    DB_HOST=app-mysql
    DB_PORT=3306
-   DB_DATABASE=navi
+   DB_DATABASE=app
    DB_USERNAME=app
    DB_PASSWORD=password
    
