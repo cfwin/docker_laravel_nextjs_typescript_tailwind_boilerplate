@@ -12,6 +12,7 @@ services:
       - 'host.docker.internal:host-gateway'
     volumes:
       - ./:/src
+      - /src/docker/nginx/logs
 
   app-api:
     container_name: "app-api"
