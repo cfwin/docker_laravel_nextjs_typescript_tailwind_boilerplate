@@ -69,11 +69,34 @@ services:
       - TZ="Asia/Tokyo"
 #    ports:
 #      - 13306:3306
+  ####################################################################################################
+  # phpMyAdmin
+  ####################################################################################################
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8081:80
+    links:
+      - app-mysql
+    environment:
+      PMA_HOST: app-mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    volumes:
+      - ./docker/phpmyadmin/sessions:/sessions
 
   app-redis:
     image: redis:alpine
     container_name: "app-redis"
     ports:
       - 16379:6379
+  ####################################################################################################
+  # Mailpit
+  ####################################################################################################
+  mail:
+    image: axllent/mailpit:latest
+    ports:
+      - 8025:8025
+      - 1025:1025
 volumes:
   data:

@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:22
 ## 设置 locale 和时区
 #RUN apk add --no-cache tzdata \
 #    && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
