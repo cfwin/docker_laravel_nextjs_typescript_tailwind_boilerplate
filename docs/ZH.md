@@ -81,9 +81,11 @@
    ```
 
 7. 进入Laravel项目目录：首先，访问 app-api 服务的容器。您可以通过运行以下命令来实现：
-    - Laravel应用程序：在浏览器中访问 http://localhost:8080/
-    - Next.js应用程序：在浏览器中访问 http://localhost:8300/
+    - Laravel应用程序：在浏览器中访问 [http://localhost:8080/](http://localhost:8080/)
+    - Next.js应用程序：在浏览器中访问 [http://localhost:8300/](http://localhost:8300/)
     - Hello页面：在浏览器中访问 http://localhost:8300/hello
+    - Mailpit 应用程序: 在浏览器中访问 [http://localhost:8025/](http://localhost:8025/)
+    - phpMyAdmin 应用程序: 在浏览器中访问 [http://localhost:8081/](http://localhost:8081/)
 
 ## 停止和清理
 
