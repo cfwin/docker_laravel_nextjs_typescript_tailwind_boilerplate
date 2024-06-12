@@ -81,9 +81,11 @@ This project is a Dockerized template aimed at helping you quickly get started w
 	```
 
 8. Enter the Laravel Project Directory: First, access the container for the app-api service. You can do this by running the following command:
-   - Laravel Application: Visit http://localhost:8080/ in your browser.
-   - Next.js Application: Visit http://localhost:8300/ in your browser.
-   - Hello Page: Visit http://localhost:8300/hello in your browser.
+   - Laravel Application: Visit [http://localhost:8080/](http://localhost:8080/) in your browser.
+   - Next.js Application: Visit [http://localhost:8300/](http://localhost:8300/) in your browser.
+   - Hello Page: Visit [http://localhost:8300/hello](http://localhost:8300/hello) in your browser.
+   - Mailpit Application: Visit [http://localhost:8300/hello](http://localhost:8025/) in your browser.
+   - phpMyAdmin Application: Visit [http://localhost:8081/](http://localhost:8081/) in your browser.
 
 ## Development
 
