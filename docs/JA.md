@@ -83,6 +83,8 @@
     - Laravelアプリケーション：ブラウザで http://localhost:8080/ を訪れます。
     - Next.jsアプリケーション：ブラウザで http://localhost:8300/ を訪れます。
     - ハローページ：ブラウザで http://localhost:8300/hello を訪れます。
+    - Mailpitアプリケーション: ブラウザで http://localhost:8025/ を訪れます。
+    - phpMyAdminアプリケーション: ブラウザで http://localhost:8081/ を訪れます。
 
 ## 開発
 
